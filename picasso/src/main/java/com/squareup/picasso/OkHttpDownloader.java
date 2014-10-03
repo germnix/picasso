@@ -98,9 +98,9 @@ public class OkHttpDownloader implements Downloader {
   @Override public Response load(Uri uri, boolean localCacheOnly) throws IOException {
     HttpURLConnection connection = openConnection(uri);
     connection.setUseCaches(true);
-    if (localCacheOnly) {
-      connection.setRequestProperty("Cache-Control", "only-if-cached,max-age=" + Integer.MAX_VALUE);
-    }
+//if (localCacheOnly) {
+//  connection.setRequestProperty("Cache-Control", "only-if-cached,max-age=" + Integer.MAX_VALUE);
+//}
 
     int responseCode = connection.getResponseCode();
     if (responseCode >= 300) {
